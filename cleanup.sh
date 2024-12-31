@@ -7,8 +7,14 @@
 . "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/base.sh"
 
 # certbot environment variables
+if [[ -z $DNSEXIT_TOKEN ]]
+then
+:
+else
 dnsExitToken="${DNSEXIT_TOKEN}"
-dnsExitBaseDomains="${DNSEXIT_BASE_DOMAINS}"
+fi
+#dnsExitToken="${DNSEXIT_TOKEN}"
+dnsExitBaseDomains="PutBasedomainHere"
 certbotDomain="${CERTBOT_DOMAIN}"
 validation="${CERTBOT_VALIDATION}"
 filename="update.json"
