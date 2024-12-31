@@ -30,7 +30,7 @@ json=$(cat <<-END
       "type": "TXT",
       "name": "_acme-challenge.${certbotDomain}",
       "content": "${validation}",
-      "ttl": 3600,
+      "ttl": 600,
       "overwrite": true
     }
   }
